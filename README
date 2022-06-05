@@ -1,0 +1,12 @@
+Dotfiles
+==========
+This repository contains configuration files for my different systems. The
+configurations can be cloned and installed according to the specific system in
+use.
+
+Systems
+- Common: Shared config files
+- Cloud : Self-Hosted Customised Linux Mint Cloud Server
+- Darwin: Main Machine
+- Edge  : RaspberryPi Edge Server
+
