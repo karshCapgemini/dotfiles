@@ -3,6 +3,7 @@
 
 **/.DS_Store
 
-*/nvim/lazy-lock.json
-*/zsh/hacks.zsh
+nvim/lazy-lock.json
+tmux/plugins/
+zsh/hacks.zsh
 
