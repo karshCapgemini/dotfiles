@@ -17,6 +17,8 @@ local plugins = {
 	{ 'kylechui/nvim-surround', event = 'VeryLazy' },	-- more surround actions
 	{ 'lukas-reineke/indent-blankline.nvim' },
     { 'github/copilot.vim', event = 'VeryLazy' },       -- Github copilot
+    { 'mbbill/undotree', event = 'VeryLazy' },          -- Undo Tree
+    { 'karshPrime/ifdef.nvim', event = 'VeryLazy' },
 
 	-- LAYOUT
 	{ 'nvim-lualine/lualine.nvim' },					-- statusbar

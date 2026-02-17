@@ -49,20 +49,22 @@ alias ntop='sudo bandwhich'
 alias pip='python3 -m pip'
 alias py=python3
 alias python=python3
+alias figlet='figlet -f $HOME/.config/dotfiles/figlet/Tubes-Smushed.flf -w $(tput cols)'
 
 # System Packages
 alias pkga='sudo apt install --no-install-recommends'
 alias pkgr='sudo apt purge'
 alias pkgs='apt search'
-alias pkgl='apt list --installed'
+alias pkgl='apt list --installed | fzf -i --cycle --ansi --color=dark --layout=reverse --pointer='▶ ' --prompt='  ''
 alias pkgx='sudo apt autoclean; sudo apt autoremove'
 
 alias update='
-    figlet -w $(tput cols) "Update Packages";
-    sudo apt update;
-    sudo apt upgrade;
+    sudo echo;
+    figlet "Update Packages";
+    sudo apt update -y;
+    sudo apt upgrade -y;
 
-    figlet -w $(tput cols) "System Cleanup"
+    figlet "System Cleanup"
     sudo apt autoclean;
     sudo apt autoremove;
 '

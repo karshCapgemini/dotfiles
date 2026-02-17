@@ -96,6 +96,7 @@ Map('<space>s', ':%s/', true, false)            -- faster %s
 Map('<M-z>', 'zfi{')                            -- fold inside {}
 Map('<M-Z>', 'zo')                              -- fold open
 Map('<M-j>', '<Esc>jzz<CR>')
+Map('<M-k>', '<Esc>kzz<CR>')
 
 
 --# PlatformIO #--------------------------------------------------------------

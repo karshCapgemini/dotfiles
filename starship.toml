@@ -12,7 +12,7 @@ format = """  \
     $rust\
     $git_branch\
     $git_status
-[  ](blue red)"""
+[  ](yellow red)"""
 
 
 #-- Git -----------------------------------------------------------------------
@@ -21,7 +21,7 @@ format = """  \
 symbol = ' '
 truncation_length = 30
 truncation_symbol = ''
-style = "fg:#20ff20"
+style = "fg:#D7D777"
 
 [git_status]
 disabled = false
@@ -36,7 +36,7 @@ staged = " ${count} "
 stashed = " ${count} "
 up_to_date = "monke"
 untracked = "󱅘 ${count} "
-style = "fg:#55ff55"
+style = "fg:#5f7768"
 format = "$style$stashed$ahead$behind$diverged$conflicted$deleted$renamed$modified$staged$untracked"
 
 

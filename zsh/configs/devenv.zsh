@@ -46,11 +46,11 @@ alias gitu="git reset --soft 'HEAD^'"
 
 pinit() { $HOME/Projects/.init.sh $@; cd "${1%.*}"; main }
 
-alias vic='vi ./src ./include c h'
+alias vic='vi ./src c h'
 
 alias pins='
     pushd "$(git rev-parse --show-toplevel 2>/dev/null || pwd)/main/include" > /dev/null 2>&1;
-    rg --no-line-number "\#define.*_PIN\s+";
+    rg --no-line-number "^#define\s+([A-Z0-9_]+_(?:PIN|PORTS?))\s+(\d+)\b";
     popd > /dev/null 2>&1;
 '
 
@@ -62,6 +62,7 @@ alias pyenv='
 
 alias pyreq="parent; pip install -r ./requirements.txt"
 
-
-# Zypher West --------------------------------------------------------------------------------------
-
+nrfconnect() {
+    /opt/nrf-desktop/nrfconnect --no-sandbox >/dev/null 2>&1 & disown %+;
+}
+alias killnrfconnect='pkill -9 -f "/opt/nrf-desktop/nrfconnect" >/dev/null 2>&1 || true'

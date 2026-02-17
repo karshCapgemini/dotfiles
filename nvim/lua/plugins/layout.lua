@@ -61,6 +61,10 @@ require("ibl").setup {
 --# noice #----------------------------------------------------------------------------------------
 
 require("noice").setup({
+
+    -- Keep messages on screen for longer
+    views = { mini = { timeout = 10000, }, },
+
     lsp = {
         progress = {
             enabled = false,          -- Disable LSP progress messages
