@@ -50,7 +50,7 @@ Map('<Esc>', '<Esc>:noh<CR>')         -- extend Esc to also hide search
 -- toggle color column
 function ToggleColumn()
     if vim.wo.colorcolumn == "" then
-        vim.wo.colorcolumn = "100"
+        vim.wo.colorcolumn = "100,80"
     else
         vim.wo.colorcolumn = ""
     end
@@ -86,7 +86,7 @@ vim.cmd([[command! -nargs=0 Wq wq]])            -- :W work same as :w
 -- to whole file
 Map('sA', 'gg"_dG<CR>')                         -- delete all without buffer
 Map('dA', ':%delete<CR>')                       -- delete all with buffer
-Map('yA', ':%yank<CR>')                         -- yank all
+Map('yA', ':w !clip.exe<CR>')                   -- yank all
 Map('=A', 'myLgg=G``zb`y<CR>:%s/ *$//g<CR>')    -- format the whole file
 Map('<leader>R', 'gg"_dGp<CR>')                 -- replace whole text
 
@@ -99,12 +99,6 @@ Map('<M-j>', '<Esc>jzz<CR>')
 Map('<M-k>', '<Esc>kzz<CR>')
 
 
---# PlatformIO #--------------------------------------------------------------
-
-Map('<leader>ai', ':Pioinit<CR>')
-Map('<leader>am', ':Piomon<CR>')
--- alternatively use :Piomon <bodrate> for specific, non-specified rate
--- use :Piolib <search filter> to search and install libs. uses telescope.
 
 
 --# Inserts #-----------------------------------------------------------------

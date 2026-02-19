@@ -1,17 +1,16 @@
 -------------------------------------------------------------------------------
 --# Additions #----------------------------------------------------------------
 
-vim.o.clipboard = "unnamedplus"
 vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.cmd('syntax enable')
+vim.opt.shortmess:append("I")
 vim.cmd('set laststatus=3')
-vim.cmd('set cursorline')
 vim.cmd('set nu relativenumber')
 vim.cmd('set nocompatible')
 vim.cmd('set linebreak')
-vim.cmd('set textwidth=100')
+vim.cmd('set textwidth=80')
 vim.cmd('set termguicolors')
 
 vim.cmd('set showmatch')
@@ -37,5 +36,13 @@ vim.cmd('let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"')
 vim.cmd('let g:netrw_banner = 0')
 vim.cmd('let g:netrw_sort_options = "i"')
 
-vim.cmd('set rtp+=/opt/homebrew/opt/fzf')
+-- Load after loading the editor
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        vim.schedule(function()
+            vim.o.clipboard = "unnamedplus"
+            vim.cmd('set rtp+=/usr/bin/fzf')
+        end)
+    end,
+})
 

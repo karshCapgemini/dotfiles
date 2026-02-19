@@ -43,11 +43,3 @@ Map('<leader>b[', ':TMUXcompile MakeV<CR>')
 Map('<leader>b]', ':TMUXcompile MakeH<CR>')
 Map('<leader>b\\',':TMUXcompile MakeBG<CR>')
 
-
---# Only TMUX #------------------------------------------------------------------------------------
-
-require('only_tmux').setup({ new_window_name = "session" })
-
-Map('<leader>o', ':TMUXonly close<CR>')
-Map('<leader>O', ':TMUXonly move<CR>')
-
