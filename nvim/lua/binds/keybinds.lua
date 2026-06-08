@@ -165,3 +165,10 @@ Map('i', "<M-j>", "<down>")
 Map('i', "<M-k>", "<up>")
 Map('i', "<M-l>", "<right>")
 
+
+--# Copilot Model #-------------------------------------------------------------
+
+Map('n', '<Space>m1', "i/model claude-opus-4.8<Esc>ZZ")
+Map('n', '<Space>m2', "i/model claude-sonnet-4.6<Esc>ZZ")
+Map('n', '<Space>m3', "i/model gemini-3.5-flash<Esc>ZZ")
+
